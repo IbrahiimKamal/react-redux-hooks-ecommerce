@@ -10,17 +10,22 @@ const Categories = () => {
       <section className="py-5">
         <div className="container">
           <div className="row">
-            <div className="col-10 col-md-4 mx-auto">
+            <div className="col-10 col-md-3 mb-4 mb-md-0 mx-auto">
               <Link to="/">
                 <Category title="watch" />
               </Link>
             </div>
-            <div className="col-10 col-md-4 mx-auto my-4 my-md-0 ">
+            <div className="col-10 col-md-3 mx-auto mb-4 mb-md-0 ">
               <Link to="/">
                 <Category title="shoes" />
               </Link>
             </div>
-            <div className="col-10 col-md-4 mx-auto">
+            <div className="col-10 col-md-3 mx-auto mb-4 mb-md-0">
+              <Link to="/">
+                <Category title="shirt" />
+              </Link>
+            </div>
+            <div className="col-10 col-md-3 mx-auto">
               <Link to="/">
                 <Category title="shirt" />
               </Link>

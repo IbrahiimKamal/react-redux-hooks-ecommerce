@@ -1,0 +1,34 @@
+@import '../../assets/styles/_variables.scss';
+@import '../../assets/styles/_mixins.scss';
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title__line {
+    width: 20%;
+    height: 0.09px;
+    background: $line-color;
+
+    @include atMdScreen {
+      width: 40%;
+    }
+
+    @include atLgScreen {
+      width: 70%;
+    }
+  }
+
+  .title__heading {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    @include atMdScreen {
+      font-size: 1.5rem;
+    }
+  }
+}

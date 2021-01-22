@@ -2,13 +2,15 @@ import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+import productsReducer from './products/products_reducers';
+
 const persistConfig = {
   key: 'root',
   storage,
 };
 
 const rootReducer = combineReducers({
-  replaceMe: () => 'Redux',
+  products: productsReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);

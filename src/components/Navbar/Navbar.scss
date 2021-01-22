@@ -1,0 +1,72 @@
+// import variables & mixins from styles folder in assets folder
+@import '../../assets/styles/_variables.scss';
+@import '../../assets/styles/_mixins.scss';
+
+.site-header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $grey-color;
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    width: 50%;
+  }
+
+  &__links {
+    display: none;
+
+    @include atLgScreen {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-right: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: $main-black;
+    text-transform: uppercase;
+  }
+
+  &__icons-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icons-item {
+    font-size: 1.5rem;
+
+    &:nth-child(2) {
+      margin-left: 2rem;
+      position: relative;
+    }
+  }
+
+  &__cart-count {
+    position: absolute;
+    top: -12px;
+    left: 14px;
+    font-size: 0.7rem;
+    background: $primary-color;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+  }
+}

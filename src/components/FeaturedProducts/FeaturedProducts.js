@@ -3,16 +3,16 @@ import { useSelector } from 'react-redux';
 import Title from '../Title/Title';
 import Product from '../Product/Product';
 
-const BestProducts = () => {
-  const { bestProducts } = useSelector((state) => state.products);
+const FeaturedProducts = () => {
+  const { featuredProducts } = useSelector((state) => state.products);
 
   return (
     <>
       <section className="py-5">
         <div className="container">
-          <Title title="BEST SELLING" />
+          <Title title="OUR FEATURED" />
           <div className="row">
-            {bestProducts.map((product) => {
+            {featuredProducts.map((product) => {
               return (
                 <div
                   key={product.sku}
@@ -29,4 +29,4 @@ const BestProducts = () => {
   );
 };
 
-export default BestProducts;
+export default FeaturedProducts;

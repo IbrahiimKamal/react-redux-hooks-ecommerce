@@ -1,3 +1,5 @@
+@import './assets/styles/_variables.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -14,4 +16,27 @@ body {
 
 ul {
   list-style: none;
+}
+
+.btn {
+  padding: 0.8rem 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: box-shadow 0.2s linear;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.btn-black {
+  background: $main-black;
+  color: $main-white;
 }

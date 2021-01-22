@@ -1,0 +1,49 @@
+// import mixins from styles folder in assets folder
+@import '../../assets/styles/_mixins.scss';
+
+.banner {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+
+  @include atLgScreen {
+    min-height: calc(100vh - 88px);
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__hero {
+    position: absolute;
+    top: 79px;
+    right: 40px;
+    text-align: right;
+
+    @include atMdScreen {
+      right: 125px;
+    }
+
+    @include atXLScreen {
+      top: 110px;
+      right: 185px;
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+
+    @include atMdScreen {
+      font-size: 2rem;
+    }
+
+    @include atXLScreen {
+      font-size: 3rem;
+    }
+  }
+}

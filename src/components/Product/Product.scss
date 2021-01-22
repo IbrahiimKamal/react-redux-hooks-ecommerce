@@ -1,0 +1,86 @@
+@import '../../assets/styles/_variables.scss';
+@import '../../assets/styles/_mixins.scss';
+
+.product {
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 0px 7px 0px rgba(230, 230, 232, 1);
+  }
+
+  @include atLgScreen {
+    margin-bottom: 0;
+  }
+
+  &__image-container {
+    border: 1px solid $border-color;
+    border-bottom: none;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  &__footer {
+    padding: 1rem;
+    border: 1px solid $border-color;
+    border-top: none;
+  }
+
+  &__footer-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__footer-title {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: $main-black;
+  }
+
+  &__footer-icon {
+    display: inline-block;
+    font-size: 1.3rem;
+    background: $main-white;
+    border: 1px solid $grey-color;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    color: $main-black;
+
+    &:hover {
+      background: $primary-color;
+      color: $main-white;
+    }
+  }
+
+  &__footer-prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  &__footer-price {
+    margin-right: 0.5rem;
+    color: $main-black;
+
+    &--old {
+      font-size: 0.8rem;
+      text-decoration: line-through;
+      color: $grey-color;
+    }
+  }
+}

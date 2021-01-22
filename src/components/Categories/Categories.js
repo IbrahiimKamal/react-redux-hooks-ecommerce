@@ -6,9 +6,9 @@ import Category from './Category/Category';
 const Categories = () => {
   return (
     <>
-      <Title title="BROWSE OUR CATEGORIES" />
       <section className="py-5">
         <div className="container">
+          <Title title="BROWSE OUR CATEGORIES" />
           <div className="row">
             <div className="col-10 col-md-3 mb-4 mb-md-0 mx-auto">
               <Link to="/">

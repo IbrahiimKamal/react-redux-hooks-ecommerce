@@ -8,6 +8,7 @@ import Categories from '../components/Categories/Categories';
 import BestProducts from '../components/BestProducts/BestProducts';
 import FeaturedProducts from '../components/FeaturedProducts/FeaturedProducts';
 import Hero from '../components/Hero/Hero';
+import ClientSlider from '../components/ClientSlider/ClientSlider';
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const HomePage = () => {
         text="free shipping on orders over $99"
       />
       <FeaturedProducts />
+      <ClientSlider />
     </>
   );
 };

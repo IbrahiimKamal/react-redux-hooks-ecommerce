@@ -6,7 +6,7 @@ const MainBanner = () => {
   return (
     <div className="banner">
       <div className="banner__image-container">
-        <img src={bannerBg} className="banner__image" />
+        <img src={bannerBg} className="banner__image" alt="banner image" />
       </div>
       <div className="banner__hero">
         <h1 className="banner__title">

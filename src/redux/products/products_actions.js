@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-import { FETCH_PRODUCTS, ADD_TO_CART } from './products_types';
+import {
+  FETCH_PRODUCTS,
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+} from './products_types';
 
 const URL = 'https://600c30e638fd25001702cf7e.mockapi.io/api/v1/products';
 
@@ -19,5 +23,14 @@ export const addToCart = (itemID) => {
   return {
     type: ADD_TO_CART,
     payload: itemID,
+  };
+};
+
+export const removeFromCart = (itemID) => {
+  return {
+    type: REMOVE_FROM_CART,
+    payload: {
+      id: itemID,
+    },
   };
 };

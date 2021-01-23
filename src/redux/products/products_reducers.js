@@ -1,4 +1,8 @@
-import { FETCH_PRODUCTS, ADD_TO_CART } from './products_types';
+import {
+  FETCH_PRODUCTS,
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+} from './products_types';
 
 const initialState = {
   loading: true,
@@ -32,6 +36,12 @@ const productsReducer = (state = initialState, action) => {
               item.id === action.payload ? { ...item, qty: item.qty + 1 } : item
             )
           : [...state.cart, { ...item, qty: 1 }],
+      };
+
+    case REMOVE_FROM_CART:
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
       };
 
     default:

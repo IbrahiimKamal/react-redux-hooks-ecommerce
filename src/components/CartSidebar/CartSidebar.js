@@ -6,6 +6,7 @@ import { CgCloseO } from 'react-icons/cg';
 import { formatPrice } from '../../utils/formatPrice';
 
 import { closeSideCart } from '../../redux/sidebar/sidebar_actions';
+import { removeFromCart } from '../../redux/products/products_actions';
 
 import './CartSidebar.scss';
 
@@ -30,7 +31,6 @@ const CartSidebar = () => {
 
   return (
     <div
-      onClick={() => dispatch(closeSideCart())}
       className={
         sideCartOpen ? 'cart-overlay cart-overlay--show' : 'cart-overlay'
       }
@@ -65,7 +65,9 @@ const CartSidebar = () => {
                       {formatPrice(item.price)}
                     </p>
                     <p className="cart-sidebar__delete">
-                      <MdDelete />
+                      <MdDelete
+                        onClick={() => dispatch(removeFromCart(item.id))}
+                      />
                     </p>
                   </div>
                 </div>

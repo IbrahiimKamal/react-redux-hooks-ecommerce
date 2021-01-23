@@ -1,13 +1,17 @@
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { AiOutlineShopping } from 'react-icons/ai';
 
 import { formatPrice } from '../../utils/formatPrice';
-
 import Stars from '../Stars/Stars';
+
+import { addToCart } from '../../redux/products/products_actions';
 
 import './Product.scss';
 
 const Product = ({ product }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="product">
       <Link to={`/products/${product.sku}`}>
@@ -25,7 +29,9 @@ const Product = ({ product }) => {
             <h3 className="product__footer-title">{product.name}</h3>
           </Link>
           <span className="product__footer-icon">
-            <AiOutlineShopping />
+            <AiOutlineShopping
+              onClick={() => dispatch(addToCart(product.id))}
+            />
           </span>
         </div>
         <div className="product__footer-prices">

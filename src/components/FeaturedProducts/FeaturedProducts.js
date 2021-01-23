@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import Title from '../Title/Title';
 import Product from '../Product/Product';
-import Loading from '../Loading';
+import Loading from '../Loading/Loading';
 
 const FeaturedProducts = ({ featuredProducts }) => {
   const { loading } = useSelector((state) => state.products);
@@ -31,7 +31,7 @@ const FeaturedProducts = ({ featuredProducts }) => {
             {featuredProducts.map((product) => {
               return (
                 <div
-                  key={product.sku}
+                  key={product.id}
                   className="col-10 col-md-6 col-lg-3 mx-auto"
                 >
                   <Product product={product} />

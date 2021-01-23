@@ -7,7 +7,6 @@ import productsReducer from './products/products_reducers';
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['products'],
 };
 
 const rootReducer = combineReducers({

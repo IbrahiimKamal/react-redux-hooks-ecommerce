@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import { FETCH_PRODUCTS } from './products_types';
+import { FETCH_PRODUCTS, ADD_TO_CART } from './products_types';
 
-const URL = 'https://600add08778d1a0017794934.mockapi.io/api/v1/products';
+const URL = 'https://600c30e638fd25001702cf7e.mockapi.io/api/v1/products';
 
 export const fetchProducts = () => {
   return async (dispatch) => {
@@ -12,5 +12,12 @@ export const fetchProducts = () => {
     } catch (error) {
       console.log(error);
     }
+  };
+};
+
+export const addToCart = (itemID) => {
+  return {
+    type: ADD_TO_CART,
+    payload: itemID,
   };
 };

@@ -13,12 +13,14 @@ import {
 
 // components
 import Navbar from './components/Navbar/Navbar';
+import CartSidebar from './components/CartSidebar/CartSidebar';
 import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
     <Router>
       <Navbar />
+      <CartSidebar />
       <Switch>
         <Route exact path="/">
           <Home />

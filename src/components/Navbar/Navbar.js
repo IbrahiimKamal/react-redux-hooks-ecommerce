@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BiUser } from 'react-icons/bi';
 import { CgShoppingBag } from 'react-icons/cg';
@@ -8,10 +10,25 @@ import { navbarLinks } from '../../utils/navbarLinks';
 // import logo from assets
 import logo from '../../assets/images/logo.png';
 
+import { toggleSideCart } from '../../redux/sidebar/sidebar_actions';
+
 // navbar styles
 import './Navbar.scss';
 
 const Navbar = () => {
+  const { cart } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
+
+    setCartCount(count);
+  }, [cart, cartCount]);
+
   return (
     <header className="site-header">
       {/* bootstrap container class */}
@@ -52,8 +69,11 @@ const Navbar = () => {
                 <BiUser className="site-header__icon" />
               </li>
               <li className="site-header__icons-item">
-                <CgShoppingBag className="site-header__cart-icon" />
-                <span className="site-header__cart-count">22</span>
+                <CgShoppingBag
+                  onClick={() => dispatch(toggleSideCart())}
+                  style={{ cursor: 'pointer' }}
+                />
+                <span className="site-header__cart-count">{cartCount}</span>
               </li>
             </ul>
           </div>

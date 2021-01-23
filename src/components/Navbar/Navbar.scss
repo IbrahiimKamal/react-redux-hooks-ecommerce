@@ -5,6 +5,11 @@
 .site-header {
   padding: 1.5rem 0;
   border-bottom: 1px solid $border-color;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  background: $main-white;
 
   &__navbar {
     display: flex;

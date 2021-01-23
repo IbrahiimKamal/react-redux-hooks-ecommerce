@@ -51,7 +51,7 @@ const ClientSlider = () => {
   };
 
   return (
-    <section className="py-5 section-bg overflow-hidden">
+    <section className="py-5 section-bg">
       <div className="container">
         <Title title="OUR CLIENTS" />
         <Slider {...settings}>

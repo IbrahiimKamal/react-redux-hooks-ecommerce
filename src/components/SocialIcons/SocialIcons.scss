@@ -1,0 +1,41 @@
+@import '../../assets/styles/_variables.scss';
+
+.socila-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    border: 1px solid $border-color;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:nth-child(2) {
+      margin: 0 0.5rem;
+    }
+
+    &:nth-child(1):hover {
+      background: #1877f2;
+      color: #fff;
+      border: none;
+    }
+
+    &:nth-child(2):hover {
+      background: rgba(29, 161, 242, 1);
+      color: #fff;
+      border: none;
+    }
+
+    &:nth-child(3):hover {
+      background: #0a66c2;
+      color: #fff;
+      border: none;
+    }
+  }
+}

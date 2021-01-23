@@ -13,6 +13,7 @@ import {
 
 // components
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
           <Error />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 };

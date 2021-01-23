@@ -1,0 +1,82 @@
+@import '../../assets/styles/_variables.scss';
+@import '../../assets/styles/_mixins.scss';
+
+.site-footer {
+  background: $footer-bg;
+  color: $grey-color;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__logo {
+    width: 50%;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    padding: 0.8rem 0.8rem;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    background: #2c2c2c;
+  }
+
+  &__btn {
+    background: $primary-color;
+    color: $main-white;
+    border: none;
+    outline: none;
+    padding: 0.8rem 0.8rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  &__content {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__content-title {
+    color: $main-white;
+    margin-bottom: 0.5rem;
+  }
+
+  &__content-text {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  &__rights {
+    display: inline-block;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+
+    &--author {
+      color: $main-white;
+    }
+
+    @include atLgScreen {
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    text-align: center;
+  }
+}

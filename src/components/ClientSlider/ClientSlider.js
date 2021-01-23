@@ -18,6 +18,7 @@ const ClientSlider = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
+    arrows: false,
     speed: 1000,
     autoplaySpeed: 2000,
     cssEase: 'linear',

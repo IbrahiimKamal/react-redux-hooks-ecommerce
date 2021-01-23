@@ -1,4 +1,5 @@
 @import '../../assets/styles/_variables.scss';
+@import '../../assets/styles/_mixins.scss';
 
 .hero {
   min-height: 60vh;
@@ -19,8 +20,16 @@
 
   &__offer {
     text-transform: capitalize;
-    // font-size: 1.8rem;
     margin-bottom: 0.5rem;
+    @include atLgScreen {
+      font-size: 2rem;
+    }
+  }
+
+  &__text {
+    @include atLgScreen {
+      font-size: 1.3rem;
+    }
   }
 
   &__offer-btn {

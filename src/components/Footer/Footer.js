@@ -1,6 +1,6 @@
 import { contactInfo, myAccount } from '../../utils/footerInfo';
 
-import footerLogo from '../../assets/images/logo-footer.png';
+import footerLogo from '../../assets/images/hogash-logo.png';
 import paymentLogo from '../../assets/images/payment.png';
 
 import SocialIcons from '../SocialIcons/SocialIcons';
@@ -13,20 +13,20 @@ const Footer = () => {
       <div className="container">
         {/* footer header */}
         <div className="row site-footer__header">
-          <div className="col-10 col-lg-4 mx-auto">
+          <div className="col-10 col-lg-2 mx-auto">
             <img
               src={footerLogo}
               alt="footer logo"
               className="site-footer__logo"
             />
           </div>
-          <div className="col-10 col-lg-4 mx-auto">
+          <div className="col-10 col-lg-5 mx-auto">
             <h5 className="site-footer__title">SUBSCRIBE TO OUR NEWSLETTER</h5>
             <p className="site-footer__text">
               Get all the latest information on Events, Sales and Offers.
             </p>
           </div>
-          <div className="col-10 col-lg-4 mx-auto">
+          <div className="col-10 col-lg-5 mx-auto">
             <form
               onSubmit={(e) => e.preventDefault()}
               className="site-footer__form"

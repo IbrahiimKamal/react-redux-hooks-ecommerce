@@ -1,13 +1,10 @@
-import bannerBg from '../../assets/images/home_banner.jpg';
+import { Link } from 'react-router-dom';
 
 import './MainBanner.scss';
 
 const MainBanner = () => {
   return (
     <div className="banner">
-      <div className="banner__image-container">
-        <img src={bannerBg} className="banner__image" alt="banner" />
-      </div>
       <div className="banner__hero">
         <h1 className="banner__title">
           shop personalize
@@ -16,7 +13,9 @@ const MainBanner = () => {
           <br />
           watches
         </h1>
-        <button className="btn btn-black">shop now</button>
+        <Link to="/products" className="btn btn-black">
+          shop now
+        </Link>
       </div>
     </div>
   );

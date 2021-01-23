@@ -2,34 +2,40 @@
 @import '../../assets/styles/_mixins.scss';
 
 .banner {
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  min-height: 30vh;
   position: relative;
+  background-image: url('../../assets/images/home_banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: contain;
+
+  @include atMdScreen {
+    min-height: 50vh;
+  }
+
+  @include atLgScreen {
+    min-height: 80vh;
+  }
 
   @include atLgScreen {
     min-height: calc(100vh - 88px);
   }
 
-  &__image {
-    width: 100%;
-    display: block;
-  }
-
   &__hero {
-    position: absolute;
-    top: 79px;
-    right: 40px;
+    padding: 0 2rem;
     text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, 15%);
 
     @include atMdScreen {
-      right: 125px;
+      transform: translate(-20%, 15%);
     }
 
     @include atXLScreen {
-      top: 110px;
-      right: 185px;
+      transform: translate(-20%, 15%);
     }
   }
 

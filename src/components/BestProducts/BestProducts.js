@@ -32,7 +32,7 @@ const BestProducts = ({ bestProducts }) => {
               return (
                 <div
                   key={product.id}
-                  className="col-10 col-md-6 col-lg-3 mx-auto"
+                  className="col-10 col-md-6 col-lg-4 mx-auto"
                 >
                   <Product product={product} />
                 </div>

@@ -13,7 +13,7 @@ const Product = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="product">
+    <div className="product mb-4">
       <Link to={`/products/${product.sku}`}>
         <div className="product__image-container">
           <img

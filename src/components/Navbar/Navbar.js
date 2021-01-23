@@ -8,7 +8,7 @@ import { CgShoppingBag } from 'react-icons/cg';
 import { navbarLinks } from '../../utils/navbarLinks';
 
 // import logo from assets
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/hogash-logo-black.png';
 
 import { toggleSideCart } from '../../redux/sidebar/sidebar_actions';
 

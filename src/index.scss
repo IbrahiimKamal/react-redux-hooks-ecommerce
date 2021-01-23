@@ -1,4 +1,5 @@
 @import './assets/styles/_variables.scss';
+@import './assets/styles/_mixins.scss';
 
 * {
   margin: 0;
@@ -19,15 +20,26 @@ ul {
 }
 
 .btn {
-  padding: 0.8rem 1.2rem;
-  text-transform: uppercase;
-  font-weight: 600;
+  padding: 0.5rem 0.8rem;
+  text-transform: capitalize;
+  font-weight: 400;
   letter-spacing: 1px;
   font-family: inherit;
   border: none;
   outline: none;
   border-radius: 0.2rem;
+  font-size: 0.7rem;
   cursor: pointer;
+  display: inline-block;
+  background: $main-white;
+
+  @include atMdScreen {
+    font-size: 1rem;
+  }
+
+  @include atLgScreen {
+    padding: 0.8rem 1rem;
+  }
 }
 
 .btn-black {

@@ -2,9 +2,25 @@ import { useSelector } from 'react-redux';
 
 import Title from '../Title/Title';
 import Product from '../Product/Product';
+import Loading from '../Loading';
 
-const FeaturedProducts = () => {
-  const { featuredProducts } = useSelector((state) => state.products);
+const FeaturedProducts = ({ featuredProducts }) => {
+  const { loading } = useSelector((state) => state.products);
+
+  if (loading) {
+    return (
+      <section className="py-5">
+        <div className="container">
+          <Title title="OUR FEATURED" />
+          <div className="row">
+            <div className="col-10 mx-auto col-md-6">
+              <Loading />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <>

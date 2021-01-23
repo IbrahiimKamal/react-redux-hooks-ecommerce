@@ -7,6 +7,7 @@ import MainBanner from '../components/MainBanner/MainBanner';
 import Categories from '../components/Categories/Categories';
 import BestProducts from '../components/BestProducts/BestProducts';
 import FeaturedProducts from '../components/FeaturedProducts/FeaturedProducts';
+import Hero from '../components/Hero/Hero';
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const HomePage = () => {
       <MainBanner />
       <Categories />
       <BestProducts />
+      <Hero />
       <FeaturedProducts />
     </>
   );

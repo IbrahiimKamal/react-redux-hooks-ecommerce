@@ -9,8 +9,8 @@ import './Product.scss';
 
 const Product = ({ product }) => {
   return (
-    <Link to={`/products/${product.sku}`}>
-      <div className="product">
+    <div className="product">
+      <Link to={`/products/${product.sku}`}>
         <div className="product__image-container">
           <img
             src={product.image}
@@ -18,28 +18,30 @@ const Product = ({ product }) => {
             className="product__image"
           />
         </div>
-        <div className="product__footer">
-          <div className="product__footer-heading">
+      </Link>
+      <div className="product__footer">
+        <div className="product__footer-heading">
+          <Link to={`/products/${product.sku}`}>
             <h3 className="product__footer-title">{product.name}</h3>
-            <span className="product__footer-icon">
-              <AiOutlineShopping />
+          </Link>
+          <span className="product__footer-icon">
+            <AiOutlineShopping />
+          </span>
+        </div>
+        <div className="product__footer-prices">
+          <span>
+            <span className="product__footer-price">
+              {formatPrice(product.price)}
             </span>
-          </div>
-          <div className="product__footer-prices">
-            <span>
-              <span className="product__footer-price">
-                {formatPrice(product.price)}
-              </span>
-              <span className="product__footer-price--old">
-                {formatPrice(product.oldPrice)}
-              </span>
+            <span className="product__footer-price--old">
+              {formatPrice(product.oldPrice)}
             </span>
-            {/* stars component */}
-            <Stars stars={product.stars} />
-          </div>
+          </span>
+          {/* stars component */}
+          <Stars stars={product.stars} />
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

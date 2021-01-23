@@ -1,0 +1,64 @@
+@import '../../assets/styles/_variables.scss';
+
+.hero {
+  min-height: 60vh;
+  background-image: url('../../assets/images/hero-banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $main-white;
+
+  &__content {
+    padding: 0 1rem;
+  }
+
+  &__offer {
+    text-transform: capitalize;
+    // font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__offer-btn {
+    background: $primary-color;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.1rem;
+  }
+
+  &__star {
+    font-size: 1rem;
+    margin-bottom: -1px;
+    &:nth-child(1) {
+      margin-right: 0.5rem;
+      animation: star-spin infinite 3s linear;
+    }
+    &:nth-child(3) {
+      margin-left: 0.5rem;
+      animation: star-spin infinite 3s linear;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  &__text {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+}
+
+@keyframes star-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

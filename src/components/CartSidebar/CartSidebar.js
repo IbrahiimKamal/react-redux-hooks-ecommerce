@@ -47,34 +47,37 @@ const CartSidebar = () => {
           </span>
         </div>
         <div className="cart-sidebar__content">
-          {cart.length > 0 &&
-            cart.map((item) => {
-              return (
-                <div key={item.id} className="cart-sidebar__products">
-                  <div className="cart-sidebar__product-image-container">
-                    <img
-                      className="cart-sidebar__product-image"
-                      src={item.image}
-                      alt="product"
-                    />
-                  </div>
-                  <div className="cart-sidebar__product-info">
-                    <p className="cart-sidebar__product-name">{item.name}</p>
-                    <div className="cart-sidebar__prices">
-                      <p className="cart-sidebar__product-qty">{item.qty} X</p>
-                      <p className="cart-sidebar__product-price">
-                        {formatPrice(item.price)}
-                      </p>
-                      <p className="cart-sidebar__delete">
-                        <MdDelete
-                          onClick={() => dispatch(removeFromCart(item.id))}
-                        />
-                      </p>
+          {cart.length > 0
+            ? cart.map((item) => {
+                return (
+                  <div key={item.id} className="cart-sidebar__products">
+                    <div className="cart-sidebar__product-image-container">
+                      <img
+                        className="cart-sidebar__product-image"
+                        src={item.image}
+                        alt="product"
+                      />
+                    </div>
+                    <div className="cart-sidebar__product-info">
+                      <p className="cart-sidebar__product-name">{item.name}</p>
+                      <div className="cart-sidebar__prices">
+                        <p className="cart-sidebar__product-qty">
+                          {item.qty} X
+                        </p>
+                        <p className="cart-sidebar__product-price">
+                          {formatPrice(item.price)}
+                        </p>
+                        <p className="cart-sidebar__delete">
+                          <MdDelete
+                            onClick={() => dispatch(removeFromCart(item.id))}
+                          />
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+            : null}
         </div>
         <div className="cart-sidebar__footer">
           Total: {formatPrice(totalPrice)}{' '}

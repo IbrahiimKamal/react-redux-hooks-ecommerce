@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { BsStar } from 'react-icons/bs';
 
 import './Hero.scss';
@@ -17,7 +18,9 @@ const Hero = ({ subtitleHeading, subtitleFooter, offer, title, text }) => {
         </h3>
         <h3 className="hero__title">{title}</h3>
         <p className="hero__text">{text}</p>
-        <button className="btn">discover now</button>
+        <Link to="/products" className="btn btn-grey">
+          discover now
+        </Link>
       </article>
     </section>
   );

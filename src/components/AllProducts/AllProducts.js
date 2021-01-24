@@ -3,16 +3,32 @@ import { useSelector } from 'react-redux';
 
 import Title from '../Title/Title';
 import Product from '../Product/Product';
+import Loading from '../Loading/Loading';
 
 import './AllProducts.scss';
 
-const AllProducts = () => {
+const AllProducts = ({ products }) => {
   const [visible, setVisible] = useState(6);
-  const { products } = useSelector((state) => state.products);
+  const { loading } = useSelector((state) => state.products);
 
   const showMoreProducts = () => {
-    setVisible((oldValue) => oldValue + 4);
+    setVisible((oldValue) => oldValue + 3);
   };
+
+  if (loading) {
+    return (
+      <section className="py-5">
+        <div className="container">
+          <Title title="BEST SELLING" />
+          <div className="row">
+            <div className="col-10 mx-auto col-md-6">
+              <Loading />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-5">

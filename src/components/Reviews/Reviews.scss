@@ -1,0 +1,38 @@
+@import '../../assets/styles/_variables.scss';
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid $border-color;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+
+  &__title {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin: 1rem 0;
+  }
+
+  &__name {
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+  }
+
+  &__customer {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+}

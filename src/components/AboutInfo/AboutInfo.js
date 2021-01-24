@@ -57,7 +57,7 @@ const AboutInfo = () => {
               </div>
             </div>
           </div>
-          <div className="col-10 col-md-6 mx-auto">
+          <div className="col-10 col-md-6 mx-auto align-self-md-center">
             <img src={aboutImage} alt="about us" className="about__image" />
           </div>
         </div>

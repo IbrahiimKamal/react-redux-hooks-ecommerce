@@ -7,6 +7,8 @@ import Banner from '../components/Banner/Banner';
 import AllProducts from '../components/AllProducts/AllProducts';
 import ClientSlider from '../components/ClientSlider/ClientSlider';
 
+import productsBanner from '../assets/images/products-banner.jpg';
+
 const AllProductsPage = () => {
   const { products } = useSelector((state) => state.products);
   const dispatch = useDispatch();
@@ -17,7 +19,7 @@ const AllProductsPage = () => {
 
   return (
     <>
-      <Banner />
+      <Banner image={productsBanner} />
       <AllProducts products={products} />
       <ClientSlider />
     </>

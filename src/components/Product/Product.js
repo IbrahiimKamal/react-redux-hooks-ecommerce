@@ -14,7 +14,7 @@ const Product = ({ product }) => {
 
   return (
     <div className="product mb-4">
-      <Link to={`/products/${product.sku}`}>
+      <Link to={`/products/${product.id}`}>
         <div className="product__image-container">
           <img
             src={product.image}
@@ -25,7 +25,7 @@ const Product = ({ product }) => {
       </Link>
       <div className="product__footer">
         <div className="product__footer-heading">
-          <Link to={`/products/${product.sku}`}>
+          <Link to={`/products/${product.id}`}>
             <h3 className="product__footer-title">{product.name}</h3>
           </Link>
           <span className="product__footer-icon">

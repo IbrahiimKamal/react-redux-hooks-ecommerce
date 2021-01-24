@@ -1,0 +1,31 @@
+.contact-form {
+  background: #f6f7f9;
+  padding: 1rem;
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input-field {
+    width: 100%;
+    display: inline-block;
+    padding: 0.8rem 0.5rem;
+    border: 1px solid #eee;
+    border-radius: 0.2rem;
+    outline: none;
+    &:nth-child(1) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__message {
+    width: 100%;
+    border: none;
+    padding: 0.8rem 0.5rem;
+  }
+}

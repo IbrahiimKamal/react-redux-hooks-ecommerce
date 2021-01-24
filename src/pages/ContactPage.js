@@ -1,8 +1,14 @@
+import ContactUs from '../components/ContactUs/ContactUs';
+import Banner from '../components/Banner/Banner';
+
+import contactAbout from '../assets/images/contactbanner.jpg';
+
 const ContactPage = () => {
   return (
-    <div>
-      <h1>ContactPage</h1>
-    </div>
+    <>
+      <Banner image={contactAbout} />
+      <ContactUs />
+    </>
   );
 };
 

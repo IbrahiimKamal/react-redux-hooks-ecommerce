@@ -1,0 +1,13 @@
+.contact-info {
+  &__title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    &--main {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.8rem;
+  }
+}

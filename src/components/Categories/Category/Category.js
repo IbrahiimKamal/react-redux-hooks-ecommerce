@@ -1,11 +1,9 @@
-import categoryBg from '../../../assets/images/categories/category3.jpg';
-
 import './Category.scss';
 
-const Category = ({ title }) => {
+const Category = ({ title, image }) => {
   return (
     <div className="category">
-      <img src={categoryBg} alt="category" className="category__image" />
+      <img src={image} alt="category" className="category__image" />
       <button className="btn category__btn">{title}</button>
     </div>
   );

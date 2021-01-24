@@ -1,13 +1,9 @@
 @import '../../assets/styles/_mixins.scss';
 
 .product-banner {
-  min-height: 50vh;
+  min-height: 60vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   object-fit: contain;
-
-  @include atLgScreen {
-    min-height: 65vh;
-  }
 }

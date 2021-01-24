@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // pages
 import {
   Home,
+  Shirts,
+  Shoes,
+  HeadPhones,
   About,
   Contact,
   Cart,
@@ -28,6 +31,15 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/shirts">
+          <Shirts />
+        </Route>
+        <Route exact path="/shoes">
+          <Shoes />
+        </Route>
+        <Route exact path="/headphones">
+          <HeadPhones />
         </Route>
         <Route exact path="/about">
           <About />

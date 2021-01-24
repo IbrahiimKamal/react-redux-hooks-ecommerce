@@ -17,6 +17,7 @@ import {
 // components
 import Navbar from './components/Navbar/Navbar';
 import CartSidebar from './components/CartSidebar/CartSidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
 
 // scroll to top component
@@ -28,6 +29,7 @@ const App = () => {
       <ScrollToTop />
       <Navbar />
       <CartSidebar />
+      <Sidebar />
       <Switch>
         <Route exact path="/">
           <Home />

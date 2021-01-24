@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BiUser } from 'react-icons/bi';
 import { CgShoppingBag } from 'react-icons/cg';
+import { FaBars } from 'react-icons/fa';
 
 // import navbar links from utils
 import { navbarLinks } from '../../utils/navbarLinks';
@@ -10,7 +11,10 @@ import { navbarLinks } from '../../utils/navbarLinks';
 // import logo from assets
 import logo from '../../assets/images/hogash-logo-black.png';
 
-import { toggleSideCart } from '../../redux/sidebar/sidebar_actions';
+import {
+  toggleSideCart,
+  toggleSidebar,
+} from '../../redux/sidebar/sidebar_actions';
 
 // navbar styles
 import './Navbar.scss';
@@ -66,7 +70,9 @@ const Navbar = () => {
           <div className="site-header__icons">
             <ul className="site-header__icons-list">
               <li className="site-header__icons-item">
-                <BiUser className="site-header__icon" />
+                <Link style={{ color: '#000' }} to="/contact">
+                  <BiUser className="site-header__icon" />
+                </Link>
               </li>
               <li className="site-header__icons-item">
                 <CgShoppingBag
@@ -74,6 +80,12 @@ const Navbar = () => {
                   style={{ cursor: 'pointer' }}
                 />
                 <span className="site-header__cart-count">{cartCount}</span>
+              </li>
+              <li className="site-header__icons-item">
+                <FaBars
+                  className="site-header__toggle"
+                  onClick={() => dispatch(toggleSidebar())}
+                />
               </li>
             </ul>
           </div>

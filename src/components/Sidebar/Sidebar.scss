@@ -1,0 +1,65 @@
+@import '../../assets/styles/_mixins.scss';
+
+.sidebar {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 84px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 120;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+
+  @include atLgScreen {
+    top: 88px;
+    display: none;
+  }
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+    @include atLgScreen {
+      display: none;
+    }
+  }
+
+  &__content {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: all 0.2s ease-in-out;
+
+    &--show {
+      transform: translateY(0);
+    }
+
+    @include atMdScreen {
+      width: 20rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 1rem 0;
+    color: #000;
+  }
+
+  &__image {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__footer {
+    margin-bottom: 2rem;
+  }
+}

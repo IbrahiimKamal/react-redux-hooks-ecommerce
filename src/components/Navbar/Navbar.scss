@@ -59,8 +59,16 @@
     font-size: 1.5rem;
 
     &:nth-child(2) {
-      margin-left: 2rem;
+      margin: 0 1rem;
       position: relative;
+    }
+
+    &:nth-child(3) {
+      font-size: 1.3rem;
+      cursor: pointer;
+      @include atLgScreen {
+        display: none;
+      }
     }
   }
 
@@ -77,5 +85,11 @@
     align-items: center;
     border-radius: 50%;
     color: #fff;
+  }
+
+  &__toggle {
+    @include atLgScreen {
+      display: none;
+    }
   }
 }

@@ -1,0 +1,31 @@
+@import '../../../assets/styles/_variables.scss';
+
+.singleProduct {
+  border-bottom: 1px solid $border-color;
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__brand {
+    margin-bottom: 1rem;
+    &--span {
+      font-weight: 600;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &__price {
+    font-size: 2rem;
+    color: $primary-color;
+  }
+
+  &__desc {
+    color: $text-color;
+    font-size: 0.9rem;
+    margin: 1rem 0 1.5rem 0;
+    width: 80%;
+  }
+}

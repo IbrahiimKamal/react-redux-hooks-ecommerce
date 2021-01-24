@@ -4,6 +4,7 @@ import {
   FETCH_PRODUCTS,
   ADD_TO_CART,
   REMOVE_FROM_CART,
+  FETCH_SINGLE_PRODUCT,
 } from './products_types';
 
 const URL = 'https://600c30e638fd25001702cf7e.mockapi.io/api/v1/products';
@@ -32,5 +33,16 @@ export const removeFromCart = (itemID) => {
     payload: {
       id: itemID,
     },
+  };
+};
+
+export const fetchSingleProduct = (id) => {
+  return async (dispatch) => {
+    try {
+      const response = await axios.get(`${URL}/${id}`);
+      dispatch({ type: FETCH_SINGLE_PRODUCT, payload: response.data });
+    } catch (error) {
+      console.log(error);
+    }
   };
 };

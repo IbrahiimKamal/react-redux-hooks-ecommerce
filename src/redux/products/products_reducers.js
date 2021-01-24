@@ -2,12 +2,14 @@ import {
   FETCH_PRODUCTS,
   ADD_TO_CART,
   REMOVE_FROM_CART,
+  FETCH_SINGLE_PRODUCT,
 } from './products_types';
 
 const initialState = {
   loading: true,
   products: [],
   cart: [],
+  singleProduct: {},
 };
 
 const productsReducer = (state = initialState, action) => {
@@ -42,6 +44,13 @@ const productsReducer = (state = initialState, action) => {
       return {
         ...state,
         cart: state.cart.filter((item) => item.id !== action.payload.id),
+      };
+
+    case FETCH_SINGLE_PRODUCT:
+      return {
+        ...state,
+        loading: false,
+        singleProduct: action.payload,
       };
 
     default:

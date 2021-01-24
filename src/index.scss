@@ -65,6 +65,13 @@ ul {
   }
 }
 
+.btn-primary {
+  background: $primary-color;
+  color: $main-white;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
 .section-bg {
   background: $section-bg;
 }

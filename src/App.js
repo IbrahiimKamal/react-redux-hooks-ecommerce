@@ -16,9 +16,13 @@ import Navbar from './components/Navbar/Navbar';
 import CartSidebar from './components/CartSidebar/CartSidebar';
 import Footer from './components/Footer/Footer';
 
+// scroll to top component
+import ScrollToTop from './utils/ScrollToTop';
+
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <CartSidebar />
       <Switch>

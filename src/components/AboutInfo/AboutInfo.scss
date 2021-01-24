@@ -1,0 +1,37 @@
+@import '../../assets/styles/_mixins.scss';
+@import '../../assets/styles/_variables.scss';
+
+.about {
+  &__title {
+    margin-bottom: 1rem;
+
+    @include atMdScreen {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    color: $grey-color;
+
+    @include atMdScreen {
+      font-size: 1rem;
+    }
+  }
+
+  &__icon-text {
+    font-size: 0.8rem;
+    color: $grey-color;
+
+    @include atMdScreen {
+      font-size: 1rem;
+    }
+  }
+
+  &__image {
+    width: 85%;
+    display: block;
+    margin: 0 0 0 auto;
+  }
+}

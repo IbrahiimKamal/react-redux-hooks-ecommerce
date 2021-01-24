@@ -1,8 +1,10 @@
+import AboutInfo from '../components/AboutInfo/AboutInfo';
+
 const AboutPage = () => {
   return (
-    <div>
-      <h1>AboutPage</h1>
-    </div>
+    <>
+      <AboutInfo />
+    </>
   );
 };
 

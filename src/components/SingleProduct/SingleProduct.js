@@ -1,11 +1,30 @@
+import { useSelector } from 'react-redux';
+
 import Gallery from '../Gallery/Gallery';
 import SingleProductInfo from './SingleProductInfo/SingleProductInfo';
 import Title from '../Title/Title';
-
 import Hero from '../Hero/Hero';
 import ClientSlider from '../ClientSlider/ClientSlider';
+import Loading from '../Loading/Loading';
 
 const SingleProduct = ({ singleProduct }) => {
+  const { loading } = useSelector((state) => state.products);
+
+  if (loading) {
+    return (
+      <section className="py-5">
+        <div className="container">
+          <Title title="BEST SELLING" />
+          <div className="row">
+            <div className="col-10 mx-auto col-md-6">
+              <Loading />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   const {
     image,
     gallarey,
